@@ -1,5 +1,6 @@
 package org.apache.shiro.openid.realm;
 
+import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.biz.realm.AbstractAuthorizingRealm;
 import org.apache.shiro.openid.token.OpenidAccessToken;
 
@@ -16,7 +17,7 @@ public class OpenidStatefulAuthorizingRealm extends AbstractAuthorizingRealm{
 	 *
 	 * @return the authentication token class
 	 */
-	public Class<?> getAuthenticationTokenClass() {
+	public Class<? extends AuthenticationToken> getAuthenticationTokenClass() {
 		return OpenidAccessToken.class;// 此Realm只支持OpenidAccessToken
 	}
 	

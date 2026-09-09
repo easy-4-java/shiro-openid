@@ -15,8 +15,8 @@
  */
 package org.apache.shiro.openid;
 
-import jakarta.servlet.ServletRequest;
-import jakarta.servlet.ServletResponse;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 
 import org.openid4java.discovery.DiscoveryInformation;
 

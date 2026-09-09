@@ -105,11 +105,7 @@ public class OpenidAuthenticatingFilter extends AbstractTrustableAuthenticatingF
 				DiscoveryInformation discovered = consumerManager.associate(discoveries);  
 				  
 				// store the discovery information in the user's session
-				// Cast to jakarta types: at runtime in Spring Boot 4.x the actual objects are jakarta servlet
-				discoveryInformationProvider.setDiscovered(
-						(jakarta.servlet.http.HttpServletRequest) (Object) httpRequest,
-						(jakarta.servlet.http.HttpServletResponse) (Object) httpResponse,
-						discovered);
+				discoveryInformationProvider.setDiscovered(httpRequest, httpResponse, discovered);
   
 				// obtain a AuthRequest message to be sent to the OpenID provider  
 				AuthRequest authReq = consumerManager.authenticate(discovered, returnUrl);  

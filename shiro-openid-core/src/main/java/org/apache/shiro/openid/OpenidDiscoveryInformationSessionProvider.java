@@ -15,8 +15,8 @@
  */
 package org.apache.shiro.openid;
 
-import jakarta.servlet.ServletRequest;
-import jakarta.servlet.ServletResponse;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 
 import org.apache.shiro.biz.utils.SubjectUtils;
 import org.apache.shiro.session.Session;

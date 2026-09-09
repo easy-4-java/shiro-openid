@@ -64,9 +64,7 @@ public class OpenidAuthorizationFilter extends AbstracAuthorizationFilter {
   
             // retrieve the previously stored discovery information
             // Cast to jakarta types: at runtime in Spring Boot 4.x the actual objects are jakarta servlet
-            DiscoveryInformation discovered = discoveryInformationProvider.getDiscovered(
-                    (jakarta.servlet.http.HttpServletRequest) (Object) httpRequest,
-                    (jakarta.servlet.http.HttpServletResponse) (Object) httpResponse);  
+            DiscoveryInformation discovered = discoveryInformationProvider.getDiscovered(httpRequest, httpResponse);  
   
             // extract the receiving URL from the HTTP request  
             StringBuffer receivingURL = httpRequest.getRequestURL();  

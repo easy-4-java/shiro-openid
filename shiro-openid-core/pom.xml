@@ -57,5 +57,13 @@
             <version>5.10.2</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>io.github.easy4j</groupId>
+            <artifactId>shiro-extension-spring</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.openid4java</groupId>
+            <artifactId>openid4java</artifactId>
+        </dependency>
     </dependencies>
 </project>

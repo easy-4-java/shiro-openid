@@ -1,6 +1,5 @@
 package org.apache.shiro.openid.spring;
 
-import org.apache.shiro.openid.spring.cache.ShiroEhCache2CacheConfiguration;
 import org.apache.shiro.openid.OpenidDiscoveryInformationProvider;
 import org.apache.shiro.openid.OpenidDiscoveryInformationSessionProvider;
 import org.apache.shiro.spring.config.web.autoconfigure.ShiroWebAutoConfiguration;
@@ -8,7 +7,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -332,7 +330,6 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @AutoConfigureBefore(ShiroWebAutoConfiguration.class)
-@AutoConfigureAfter(ShiroEhCache2CacheConfiguration.class)
 @ConditionalOnProperty(prefix = ShiroOpenidProperties.PREFIX, value = "enabled", havingValue = "true")
 @EnableConfigurationProperties({ ShiroOpenidProperties.class })
 /**
